@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rose Day | For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  min-height:100vh;
+  overflow-x:hidden;
+  color:#333;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.25) 1px,transparent 1px);
+  background-size:22px 22px;
+  z-index:-2;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:70px 20px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:4px solid #d63384;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.3rem,5vw,3.5rem);
+  color:#d63384;
+}
+
+header p{
+  margin-top:12px;
+  font-size:1.1rem;
+  color:#555;
+  font-style:italic;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,.9);
+  border-radius:20px;
+  padding:30px;
+  margin:55px 0;
+  box-shadow:0 12px 25px rgba(0,0,0,.18);
+  text-align:center;
+  animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* MESSAGE */
+.message{
+  font-size:1.4rem;
+  line-height:1.7;
+  position:relative;
+}
+
+.message::before,
+.message::after{
+  content:"🌹";
+  position:absolute;
+  top:-20px;
+  font-size:2rem;
+}
+
+.message::before{left:20px;}
+.message::after{right:20px;}
+
+/* SHAYARI */
+.shayari h2{
+  font-family:'Playfair Display',serif;
+  color:#c9184a;
+  margin-bottom:18px;
+  font-size:2.2rem;
+}
+
+.shayari p{
+  font-size:1.3rem;
+  line-height:1.9;
+  font-style:italic;
+}
+
+/* CARTOON */
+.cartoon-area{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:25px;
+}
+
+.cartoon{
+  display:flex;
+  gap:45px;
+  font-size:4.2rem;
+}
+
+.character{
+  animation:bounce 2.5s infinite ease-in-out;
+}
+
+.character.boy{animation-delay:.3s;}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+.bubble{
+  background:#fff;
+  padding:18px 24px;
+  border-radius:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  font-size:1.2rem;
+  position:relative;
+  max-width:90%;
+}
+
+.bubble::after{
+  content:'';
+  position:absolute;
+  bottom:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  border-width:12px 12px 0;
+  border-style:solid;
+  border-color:#fff transparent transparent;
+}
+
+/* MUSIC */
+.music h2{
+  font-family:'Playfair Display',serif;
+  color:#d63384;
+  margin-bottom:20px;
+  font-size:2.1rem;
+}
+
+.music iframe{
+  width:100%;
+  max-width:560px;
+  height:315px;
+  border-radius:18px;
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* NOTES */
+.notes p{
+  font-size:1.25rem;
+  margin:12px 0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:rgba(255,255,255,.85);
+  border-top:4px solid #d63384;
+  margin-top:60px;
+}
+
+footer p{
+  font-size:1.05rem;
+  color:#555;
+  font-style:italic;
+}
+
+/* FLOATING */
+.floating{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.float-item{
+  position:absolute;
+  animation:float 10s linear infinite;
+  opacity:.8;
+  font-size:1.8rem;
+}
+
+@keyframes float{
+  from{transform:translateY(110vh) rotate(0deg);}
+  to{transform:translateY(-120vh) rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating" id="floating"></div>
+
+<header>
+  <h1>Happy Rose Day, Aashuuuu ❤️</h1>
+  <p>Dedicated to my girlfriend — the reason my words feel alive</p>
+</header>
+
+<div class="container">
+
+  <div class="card message">
+    कुछ लोग ज़िंदगी में फूलों की तरह आते हैं,<br>
+    खुशबू छोड़ जाते हैं… और हमेशा के लिए रह जाते हैं।
+  </div>
+
+  <div class="card shayari">
+    <h2>मेरी कलम से ✍️</h2>
+    <p>
+      तुम गुलाब नहीं हो,<br>
+      मगर खुशबू तुम्हारी हर बात में है।<br>
+      तुम पास नहीं हो,<br>
+      फिर भी दिल हर पल तुम्हारे साथ में है।
+    </p>
+  </div>
+
+  <div class="card cartoon-area">
+    <div class="cartoon">
+      <div class="character girl">🌸</div>
+      <div class="character boy">🌼</div>
+    </div>
+    <div class="bubble">
+      “तुम्हारी मुस्कान ही मेरी<br>
+      सबसे प्यारी शायरी है ❤️”
+    </div>
+  </div>
+
+  <div class="card music">
+    <h2>Song Dedicated to My Panda🐼🎵</h2>
+    <iframe 
+      src="https://www.youtube.com/embed/o2gK1_wERQc"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="card notes">
+    <p>🌹 तुम्हारा नाम लूँ तो सुकून मिल जाता है</p>
+    <p>❤️ तुम्हें सोचूँ तो दिन खूबसूरत लगने लगता है</p>
+    <p>✨ और तुम्हें लिखूँ… तो मैं खुद को पा लेता हूँ</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Dedicated with love — always yours ❤️</p>
+</footer>
+
+<script>
+const floating=document.getElementById("floating");
+
+function createFloat(){
+  const el=document.createElement("div");
+  el.className="float-item";
+  el.innerHTML=Math.random()>.5?"❤️":"🌸";
+  el.style.left=Math.random()*100+"vw";
+  el.style.animationDuration=(6+Math.random()*6)+"s";
+  floating.appendChild(el);
+  setTimeout(()=>el.remove(),12000);
+}
+setInterval(createFloat,700);
+</script>
+
+</body>
+</html>
